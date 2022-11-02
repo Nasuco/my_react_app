@@ -8,13 +8,16 @@ import {
 } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Login } from './components';
+import { Navbar, Login } from './components';
+import { createStore, compose, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes> 
-      {/* <Route path="/" element={<navbar/>}/> */}
+      <Route path="/" element={<Navbar/>}/>
       <Route path="/login" element={<Login/>}/>
     </Routes>
   </BrowserRouter>
